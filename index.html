@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | SmartFinance Tools</title>
+    <meta name="description" content="SmartFinance Tools offers 20+ free financial calculators including EMI, SIP, Tax, and more.">
+    <meta property="og:title" content="Home | SmartFinance Tools">
+    <meta property="og:description" content="SmartFinance Tools offers 20+ free financial calculators including EMI, SIP, Tax, and more.">
+    <meta property="og:type" content="website">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col relative font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="bg-gradient-to-br from-blue-600 to-indigo-600 p-2 rounded-lg shadow-sm">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-slate-800">Smart<span class="text-blue-600">Finance</span></span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="tools.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">All Tools</a>
+                    <a href="blog.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
+                    <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                    <a href="contact.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50">Home</a>
+                <a href="tools.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50">All Tools</a>
+                <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50">Blog</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
+            Professional Financial Tools for <br class="hidden md:block" />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Smarter Decisions</span>
+        </h1>
+        <p class="text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
+            Access 20 free, mobile-friendly financial calculators. From EMI and SIP to Income Tax and Retirement planning, we've got the tools you need to succeed.
+        </p>
+        <a href="tools.html" class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg shadow-blue-500/30 text-lg">
+            Explore All Tools
+        </a>
+    </div>
+
+    <!-- Ad Banner Top -->
+    <div class="w-full max-w-4xl mx-auto h-[90px] bg-slate-200 border border-slate-300 rounded-xl flex flex-col items-center justify-center mb-16 text-slate-500">
+        <span class="text-xs uppercase tracking-wider font-semibold mb-1">Advertisement</span>
+        <span class="text-sm">728 x 90 Banner Space</span>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+        
+        <a href="tools/emi-calculator.html" class="group bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-300 transition-all duration-300 flex flex-col h-full">
+            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition-colors duration-300">
+                <svg class="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">EMI Calculator</h3>
+            <p class="text-sm text-slate-500 flex-grow leading-relaxed">Calculate Equated Monthly Installment for loans.</p>
+        </a>
+        <a href="tools/loan-calculator.html" class="group bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-300 transition-all duration-300 flex flex-col h-full">
+            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition-colors duration-300">
+                <svg class="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Loan Calculator</h3>
+            <p class="text-sm text-slate-500 flex-grow leading-relaxed">Estimate your loan payments and interest.</p>
+        </a>
+        <a href="tools/sip-calculator.html" class="group bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-300 transition-all duration-300 flex flex-col h-full">
+            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition-colors duration-300">
+                <svg class="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">SIP Calculator</h3>
+            <p class="text-sm text-slate-500 flex-grow leading-relaxed">Calculate returns on your Systematic Investment Plan.</p>
+        </a>
+        <a href="tools/fd-calculator.html" class="group bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-300 transition-all duration-300 flex flex-col h-full">
+            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition-colors duration-300">
+                <svg class="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">FD Calculator</h3>
+            <p class="text-sm text-slate-500 flex-grow leading-relaxed">Find out the maturity amount of your Fixed Deposit.</p>
+        </a>
+        <a href="tools/rd-calculator.html" class="group bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-300 transition-all duration-300 flex flex-col h-full">
+            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition-colors duration-300">
+                <svg class="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">RD Calculator</h3>
+            <p class="text-sm text-slate-500 flex-grow leading-relaxed">Calculate the maturity value of your Recurring Deposit.</p>
+        </a>
+        <a href="tools/compound-interest-calculator.html" class="group bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-300 transition-all duration-300 flex flex-col h-full">
+            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition-colors duration-300">
+                <svg class="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Compound Interest Calculator</h3>
+            <p class="text-sm text-slate-500 flex-grow leading-relaxed">See how your money grows over time with compounding.</p>
+        </a>
+        <a href="tools/simple-interest-calculator.html" class="group bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-300 transition-all duration-300 flex flex-col h-full">
+            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition-colors duration-300">
+                <svg class="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Simple Interest Calculator</h3>
+            <p class="text-sm text-slate-500 flex-grow leading-relaxed">Quickly calculate simple interest on your principal amount.</p>
+        </a>
+        <a href="tools/mortgage-calculator.html" class="group bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-300 transition-all duration-300 flex flex-col h-full">
+            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition-colors duration-300">
+                <svg class="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Mortgage Calculator</h3>
+            <p class="text-sm text-slate-500 flex-grow leading-relaxed">Estimate your monthly mortgage payments and schedule.</p>
+        </a>
+    </div>
+    
+    <div class="text-center">
+        <a href="tools.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+            View all 20 calculators &rarr;
+        </a>
+    </div>
+</div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="bg-blue-600 p-1.5 rounded-lg">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <span class="font-bold text-lg tracking-tight text-slate-800">Smart<span class="text-blue-600">Finance</span></span>
+                    </div>
+                    <p class="text-slate-500 text-sm max-w-md leading-relaxed">
+                        Your trusted source for free, accurate, and easy-to-use financial calculators. Make smarter decisions about your money today.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-slate-900 mb-4">Top Tools</h4>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li><a href="tools/emi-calculator.html" class="hover:text-blue-600 transition-colors">EMI Calculator</a></li>
+                        <li><a href="tools/sip-calculator.html" class="hover:text-blue-600 transition-colors">SIP Calculator</a></li>
+                        <li><a href="tools/income-tax-calculator.html" class="hover:text-blue-600 transition-colors">Income Tax Calculator</a></li>
+                        <li><a href="tools/mortgage-calculator.html" class="hover:text-blue-600 transition-colors">Mortgage Calculator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-slate-900 mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li><a href="about.html" class="hover:text-blue-600 transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-600 transition-colors">Contact</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-blue-600 transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="hover:text-blue-600 transition-colors">Terms of Service</a></li>
+                        <li><a href="disclaimer.html" class="hover:text-blue-600 transition-colors">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
+                <div>&copy; 2026 SmartFinance Tools. All rights reserved.</div>
+                <div>Designed for financial empowerment.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

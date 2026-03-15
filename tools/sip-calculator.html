@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator | SmartFinance Tools</title>
+    <meta name="description" content="Calculate returns on your Systematic Investment Plan.">
+    <meta property="og:title" content="SIP Calculator | SmartFinance Tools">
+    <meta property="og:description" content="Calculate returns on your Systematic Investment Plan.">
+    <meta property="og:type" content="website">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col relative font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="../index.html" class="flex items-center gap-2">
+                    <div class="bg-gradient-to-br from-blue-600 to-indigo-600 p-2 rounded-lg shadow-sm">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-slate-800">Smart<span class="text-blue-600">Finance</span></span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="../tools.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">All Tools</a>
+                    <a href="../blog.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Blog</a>
+                    <a href="../about.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About Us</a>
+                    <a href="../contact.html" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50">Home</a>
+                <a href="../tools.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50">All Tools</a>
+                <a href="../blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50">Blog</a>
+                <a href="../about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50">About Us</a>
+                <a href="../contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Breadcrumb -->
+    <nav class="flex mb-8" aria-label="Breadcrumb">
+      <ol class="inline-flex items-center space-x-1 md:space-x-3">
+        <li class="inline-flex items-center">
+          <a href="../index.html" class="inline-flex items-center text-sm font-medium text-slate-500 hover:text-blue-600">Home</a>
+        </li>
+        <li>
+          <div class="flex items-center">
+            <svg class="w-3 h-3 text-slate-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
+            <a href="../tools.html" class="ml-1 text-sm font-medium text-slate-500 hover:text-blue-600 md:ml-2">Tools</a>
+          </div>
+        </li>
+        <li aria-current="page">
+          <div class="flex items-center">
+            <svg class="w-3 h-3 text-slate-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
+            <span class="ml-1 text-sm font-medium text-slate-800 md:ml-2">SIP Calculator</span>
+          </div>
+        </li>
+      </ol>
+    </nav>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div class="lg:col-span-2">
+            <div class="mb-8">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">SIP Calculator</h1>
+                <p class="text-lg text-slate-600">Calculate returns on your Systematic Investment Plan.</p>
+            </div>
+
+            <!-- Calculator Form -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm mb-10">
+                <form id="calc-form" data-tool="sip-calculator" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="dynamic-inputs">
+                        <!-- Inputs injected by JS -->
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-6 rounded-xl transition-all shadow-md shadow-blue-500/20 text-lg">
+                        Calculate Now
+                    </button>
+                </form>
+
+                <div id="result-container" class="hidden mt-8 p-6 bg-blue-50 border border-blue-100 rounded-xl text-center">
+                    <p class="text-sm text-blue-600 font-semibold mb-2 uppercase tracking-wide">Calculation Result</p>
+                    <p id="result-value" class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">$0.00</p>
+                    <div id="result-details" class="text-sm text-slate-600 space-y-2"></div>
+                </div>
+            </div>
+
+            <!-- In-content Ad -->
+            <div class="w-full h-[90px] bg-slate-200 border border-slate-300 rounded-xl flex flex-col items-center justify-center mb-10 text-slate-500">
+                <span class="text-xs uppercase tracking-wider font-semibold mb-1">Advertisement</span>
+                <span class="text-sm">728 x 90 Banner Space</span>
+            </div>
+
+            <!-- SEO Content -->
+            <div class="prose prose-slate prose-blue max-w-none bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Understanding the SIP Calculator</h2>
+                <p class="text-slate-600 mb-6">
+                    The SIP Calculator is a powerful financial tool designed to help you make informed decisions about your money. 
+                    Whether you are planning for the future, managing debt, or optimizing your investments, having accurate calculations is essential.
+                    This tool provides instant, precise results based on standard financial formulas, allowing you to model different scenarios effortlessly.
+                </p>
+                
+                <h3 class="text-xl font-bold text-slate-900 mb-3">How it Works</h3>
+                <p class="text-slate-600 mb-6">
+                    This calculator uses standard mathematical formulas to compute the results. It takes your inputs—such as principal amount, interest rate, and time period—and processes them instantly in your browser. No data is sent to our servers, ensuring your financial information remains completely private and secure.
+                </p>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-3">How to Use the Calculator</h3>
+                <ol class="list-decimal pl-6 text-slate-600 space-y-2 mb-6">
+                    <li>Enter the primary amount or value in the first input field.</li>
+                    <li>Input the relevant rate (such as interest rate or percentage).</li>
+                    <li>Specify the time period or duration if applicable.</li>
+                    <li>Click the "Calculate Now" button to generate your results.</li>
+                    <li>Review the detailed breakdown provided in the results section.</li>
+                </ol>
+
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Example Calculation</h3>
+                <p class="text-slate-600">
+                    For instance, if you input a principal amount of $10,000 at an annual rate of 5% for a period of 5 years, the calculator will instantly process these figures to show you the total accumulated value, total interest earned or paid, and a breakdown of the amounts. This helps you visualize the impact of time and rate on your finances.
+                </p>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+            <!-- Sidebar Ad -->
+            <div class="w-full h-[600px] bg-slate-200 border border-slate-300 rounded-2xl flex flex-col items-center justify-center text-slate-500 sticky top-24">
+                <span class="text-xs uppercase tracking-wider font-semibold mb-1">Advertisement</span>
+                <span class="text-sm">300 x 600 Half Page</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="bg-blue-600 p-1.5 rounded-lg">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <span class="font-bold text-lg tracking-tight text-slate-800">Smart<span class="text-blue-600">Finance</span></span>
+                    </div>
+                    <p class="text-slate-500 text-sm max-w-md leading-relaxed">
+                        Your trusted source for free, accurate, and easy-to-use financial calculators. Make smarter decisions about your money today.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-slate-900 mb-4">Top Tools</h4>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li><a href="../tools/emi-calculator.html" class="hover:text-blue-600 transition-colors">EMI Calculator</a></li>
+                        <li><a href="../tools/sip-calculator.html" class="hover:text-blue-600 transition-colors">SIP Calculator</a></li>
+                        <li><a href="../tools/income-tax-calculator.html" class="hover:text-blue-600 transition-colors">Income Tax Calculator</a></li>
+                        <li><a href="../tools/mortgage-calculator.html" class="hover:text-blue-600 transition-colors">Mortgage Calculator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-slate-900 mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li><a href="../about.html" class="hover:text-blue-600 transition-colors">About Us</a></li>
+                        <li><a href="../contact.html" class="hover:text-blue-600 transition-colors">Contact</a></li>
+                        <li><a href="../privacy-policy.html" class="hover:text-blue-600 transition-colors">Privacy Policy</a></li>
+                        <li><a href="../terms-of-service.html" class="hover:text-blue-600 transition-colors">Terms of Service</a></li>
+                        <li><a href="../disclaimer.html" class="hover:text-blue-600 transition-colors">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
+                <div>&copy; 2026 SmartFinance Tools. All rights reserved.</div>
+                <div>Designed for financial empowerment.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/calculator.js"></script>
+</body>
+</html>

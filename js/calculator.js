@@ -96,10 +96,8 @@ const toolConfigs = {
     ]
 };
 
-document.addEventListener('DOMContentLoaded', function() {
-    const calcForm = document.getElementById('calc-form');
-    if (!calcForm) return;
-
+const calcForm = document.getElementById('calc-form');
+if (calcForm) {
     const toolId = calcForm.getAttribute('data-tool');
     const config = toolConfigs[toolId] || toolConfigs['emi-calculator'];
     const container = document.getElementById('dynamic-inputs');
@@ -293,6 +291,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         document.getElementById('result-details').innerHTML = details;
-        document.getElementById('result-container').classList.remove('hidden');
+        const resultContainer = document.getElementById('result-container');
+        resultContainer.classList.remove('hidden');
+        
+        // Retrigger animation
+        resultContainer.classList.remove('animate-fade-in-up');
+        void resultContainer.offsetWidth; // trigger reflow
+        resultContainer.classList.add('animate-fade-in-up');
     });
-});
+}

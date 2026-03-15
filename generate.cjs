@@ -129,8 +129,8 @@ const layout = (title, content, isRoot = true, metaDesc = '', ogImage = '') => `
         </div>
     </footer>
 
-    <script src="${isRoot ? '' : '../'}js/main.js"></script>
-    ${!isRoot ? `<script src="../js/calculator.js"></script>` : ''}
+    <script type="module" src="${isRoot ? '' : '../'}js/main.js"></script>
+    ${!isRoot ? `<script type="module" src="../js/calculator.js"></script>` : ''}
 </body>
 </html>`;
 
@@ -750,43 +750,41 @@ fs.writeFileSync(path.join('css', 'style.css'), cssContent);
 
 // Write JS
 const mainJsContent = `
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', function() {
-            var menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-    }
-
-    // Intersection Observer for scroll animations
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-fade-in-up');
-                
-                // Remove animation classes after completion to prevent hover glitches
-                entry.target.addEventListener('animationend', function() {
-                    entry.target.classList.remove('animate-on-scroll', 'animate-fade-in-up');
-                    entry.target.style.animationDelay = '';
-                }, { once: true });
-                
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Observe elements
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
-    animatedElements.forEach(el => {
-        observer.observe(el);
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', function() {
+        var menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
     });
+}
+
+// Intersection Observer for scroll animations
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in-up');
+            
+            // Remove animation classes after completion to prevent hover glitches
+            entry.target.addEventListener('animationend', function() {
+                entry.target.classList.remove('animate-on-scroll', 'animate-fade-in-up');
+                entry.target.style.animationDelay = '';
+            }, { once: true });
+            
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe elements
+const animatedElements = document.querySelectorAll('.animate-on-scroll');
+animatedElements.forEach(el => {
+    observer.observe(el);
 });
 `;
 fs.writeFileSync(path.join('js', 'main.js'), mainJsContent);
@@ -889,10 +887,8 @@ const toolConfigs = {
     ]
 };
 
-document.addEventListener('DOMContentLoaded', function() {
-    const calcForm = document.getElementById('calc-form');
-    if (!calcForm) return;
-
+const calcForm = document.getElementById('calc-form');
+if (calcForm) {
     const toolId = calcForm.getAttribute('data-tool');
     const config = toolConfigs[toolId] || toolConfigs['emi-calculator'];
     const container = document.getElementById('dynamic-inputs');
@@ -1094,7 +1090,7 @@ document.addEventListener('DOMContentLoaded', function() {
         void resultContainer.offsetWidth; // trigger reflow
         resultContainer.classList.add('animate-fade-in-up');
     });
-});
+}
 `;
 fs.writeFileSync(path.join('js', 'calculator.js'), calculatorJsContent);
 
